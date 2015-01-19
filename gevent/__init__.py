@@ -9,7 +9,11 @@ See http://www.gevent.org/ for the documentation.
 from __future__ import absolute_import
 
 version_info = (1, 1, 0, 'dev', None)
-__version__ = '1.1'
+# Custom version for internal PyPI. 
+# This version of gevent is commit b8010c6714f290aed083ab3626c4c258dd29357a
+# In this commit, gevent.ssl uses PROTOCOL_SSLv23 instead of v3
+# See https://github.com/gevent/gevent/issues/513
+__version__ = '1.1+hivelocity.1'
 
 
 __all__ = ['get_hub',
